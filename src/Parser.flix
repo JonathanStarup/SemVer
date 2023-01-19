@@ -71,5 +71,4 @@ mod SemVer.Parser {
             patch <- parseVersionNumber(patchStr)
         ) yield (patch, patchSuffix)
     }
-
 }
