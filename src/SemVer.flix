@@ -83,6 +83,16 @@ mod SemVer {
         SemVer(getMajor(v), getMinor(v), getPatch(v) + 1)
     }
 
+    ///
+    /// Increments the version acording to the rules
+    /// concerning a bug fix change.
+    ///
+    /// Alias for `increasePatch`.
+    ///
+    pub def increaseBugFix(v: SemVer): SemVer = {
+        increasePatch(v)
+    }
+
     /// Parses the input string as a semantic version.
     pub def fromString(s: String): Option[SemVer] = {
         SemVer.Parser.fromString(s)
