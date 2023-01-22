@@ -61,6 +61,16 @@ mod SemVer {
     }
 
     ///
+    /// Increments the version acording to the rules
+    /// concerning a breaking change.
+    ///
+    /// Alias for `increaseMajor`.
+    ///
+    pub def increaseBreaking(v: SemVer): SemVer = {
+        increaseMajor(v)
+    }
+
+    ///
     /// Increases the minor part of the version,
     /// thus resetting the patch part.
     ///
